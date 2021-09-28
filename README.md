@@ -1,8 +1,8 @@
-## **Technical Requirements**
+<!-- ## **Technical Requirements**
 
 Your app must:
 
-- **HAVE ITS OWN REPO, under your github account. NOT A FORK.**
+- **HAVE ITS OWN REPO, under your github account. NOT A FORK.** -- DONE
 - **Git 20+ commits** Commit early, commit often. Tell a story with your commits. Each message should give a clear idea what you changed.
 - **Include Wireframes and User Stories in the README**
 - **Wireframe:** - Basically draw out what your game will look like—very different way it could look. You can use paper or any wireframe tool you find online.
@@ -31,4 +31,31 @@ Your app must:
     - Triumphs
     - Challenges
     - Words of Wisdom
-    - Code snippets
+    - Code snippets 
+  
+  ## **Icebox**
+  - If status levels reach 10, cat runs away and finds a new owner; if age reaches 20, cat goes to kitty heaven
+  - Feed and play actions randomly select different elements (feed: kibble, fish, lasagna) (play: mouse on string, laser light, catnip time)
+
+
+=== User Stories ===
+
+User is greeted with a modal stating "Your new kitten is so happy to meet you! What are you going to name it?" with a textbox to enter cat's name.
+Modal disappears and the user appears at a screen with a kitten in the middle, status indicators of hungry, sleepy, and bored set to zero, the cat's name and age, and three action buttons to feed, turn off lights, and play.
+Cat's age increases by one year each minute.
+Hunger status increases by one point every 5 seconds
+Sleepiness status increases by one point every 12 seconds
+Boredom status increases by one point every 8 seconds
+When feed action is clicked, hunger status decreases by 4 points
+When turn off lights action is clicked, sleepiness status decreases by 5 points
+When play action is clicked, boredom status decreases by 3
+
+Cat mood will change image based on status levels. Whenever any status
+
+Cat image will change to reflect age when cat reaches 2 (from kitten to adolescent), 7 (from adolescent to adult), and 14 years (from adult to old)
+
+
+
+
+  -->
+
