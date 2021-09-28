@@ -12,7 +12,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <!-- Main JS -->
     <script src="./scripts/app.js" defer></script>
-    <title>Tomagotchi</title>
+
+    <!-- Modal -->
+   <!--  <div class="modal" id="modal-one" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>Your new kitten is so happy to meet you! What are you going to name it?</h2>
+    <a href="#modal-one" class="btn-close" aria-hidden="true">×</a>
+
+            </div>
+            <div class="modal-body">
+                <p><form action="/action_page.php">
+                    <input type="text" id="catName" name="catName"></p>
+            </div>
+            <div class="modal-footer"> <a href="#modal-one" class="btn">Take me to my kitty!</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="wrap"> <a href="#" class="btn btn-big">Name your cat!</a>
+
+    </div> -->
+
+    <title>🐱 Tomagotchi 🐱</title>
 </head>
 <body>
     <main>
@@ -32,11 +54,9 @@
         </header>
         <container>
             <aside>
-                <textbox id="name">
-                    <h2>[Cat's name]</h2>
-                </textbox>
+                <h2 id="name">catName</h2>
                 <age>
-                    is [Cat's age] years old
+                    is <div catAge="">___</div> years old
                 </age>
             </aside>
             <section>

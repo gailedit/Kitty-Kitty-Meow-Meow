@@ -37,6 +37,7 @@ Your app must:
   - If status levels reach 10, cat runs away and finds a new owner; if age reaches 20, cat goes to kitty heaven
   - Feed and play actions randomly select different elements (feed: kibble, fish, lasagna) (play: mouse on string, laser light, catnip time)
   - Select cat gender/pronouns
+  - Status bars change color based on current value: 0-4 green, 5-7 goldenrod, 8-10 red
 
 === Timeline ===
 Tuesday: Finish planning, build repo, set up static site; start building objects
@@ -48,8 +49,7 @@ Friday: 10:00 am deployment
 
 === User Stories ===
 
-User is greeted with a modal stating "Your new kitten is so happy to meet you! What are you going to name it?" with a textbox to enter cat's name.
-Modal disappears and the user appears at a screen with a kitten in the middle, status indicators of hungry, sleepy, and bored set to zero, the cat's name and age, and three action buttons to feed, turn off lights, and play.
+User is greeted with a modal stating "Your new kitten is so happy to meet you! What are you going to name it?" with a textbox to enter cat's name. Once name is entered, modal disappears and the game begins on a screen with a kitten in the middle, status indicators of hungry, sleepy, and bored set to zero, the cat's name and age, and three action buttons to feed, turn off lights, and play.
 Cat's age increases by one year each minute.
 Hunger status increases by one point every 5 seconds
 Sleepiness status increases by one point every 12 seconds
