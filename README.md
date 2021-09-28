@@ -38,6 +38,13 @@ Your app must:
   - Feed and play actions randomly select different elements (feed: kibble, fish, lasagna) (play: mouse on string, laser light, catnip time)
   - Select cat gender/pronouns
 
+=== Timeline ===
+Tuesday: Finish planning, build repo, set up static site; start building objects
+Wednesday: Set up timers
+Thursday: Styling & timers
+Friday: 10:00 am deployment
+
+
 
 === User Stories ===
 
