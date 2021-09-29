@@ -52,93 +52,126 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
   */
 
 
-  const game = {
-      /* === Game Values === */
-    name: null,
-    age: 0,
-    hunger: 0,
-    sleepy: 0,
-    boredom: 0,
-    image: "kitten",
-
-    /* === Declaring variables === */
-
-    /* const $catName = ;
-    const $catAge = ;
-    const $hungerStatus = ;
-    const $sleepyStatus = ;
-    const $boredomStatus = ; */
-
-    /* === Game Logic === */
-     start(event){
-        this.startAgeTimer();
-        this.startHungerTimer();
-        this.startSleepyTimer();
-        this.startBoredomTimer();
-    },
+const game = {
+    /* === Game Values === */
+  name: null,
+  age: 0,
+  hunger: 0,
+  sleepy: 0,
+  boredom: 0,
   
-    ageTimer: null,
-    startAgeTimer() {
-      this.ageTimer = setInterval(this.increaseAge.bind(game), 30000)
-    },
+  image: "kitten",
 
-    increaseAge() {
-      this.age++ ;
-      $("#catAge").text(game.age);
-      if (this.age >= 20) {
-        console.log("Game Over - your cat lived a long life and has crossed the rainbow bridge");
-      }
-    },
 
-    hungerTimer: null,
-    startHungerTimer() {
-      this.hungerTimer = setInterval(this.increaseHunger.bind(game), 6000)
-    },
+  /* === Game Logic === */
+  start(event){
+    console.warn("=== Keep your precious kitty alive! ===")
+    this.startAgeTimer();
+    this.startHungerTimer();
+    this.startSleepyTimer();
+    this.startBoredomTimer();
+  },
 
-    increaseHunger() {
-      this.hunger++ ;
-      $("#hunger").val(game.hunger);
-      if (this.hunger >= 10) {
-        console.log("Game Over - your cat found a new home")
-      } 
-    },
+  /* === Timers === */
+  ageTimer: null,
+  startAgeTimer() {
+    this.ageTimer = setInterval(this.increaseAge.bind(game), 30000)
+  },
 
-    sleepyTimer: null,
-    startSleepyTimer() {
-      this.sleepyTimer = setInterval(this.increaseSleepy.bind(game), 12000)
-    },
+  increaseAge() {
+    this.age++ ;
+    $("#catAge").text(game.age);
+    if (this.age >= 20) {
+      console.log("Game Over - your cat lived a long life and has crossed the rainbow bridge");
+    }
+  },
 
-    increaseSleepy() {
-      this.sleepy++ ;
-      $("#sleepy").val(game.sleepy);
-      if (this.sleepy >= 10) {
-        console.log("Game Over - your cat found a new home")
-      } 
-    },
+  hungerTimer: null,
+  startHungerTimer() {
+    this.hungerTimer = setInterval(this.increaseHunger.bind(game), 6000)
+  },
 
-    boredomTimer: null,
-    startBoredomTimer() {
-      this.boredomTimer = setInterval(this.increaseBoredom.bind(game), 6000)
-    },
+  increaseHunger() {
+    this.hunger++ ;
+    $("#hunger").val(game.hunger);
+    if (this.hunger >= 10) {
+      console.log("Game Over - your cat found a new home")
+    } 
+  },
 
-    increaseBoredom() {
-      this.boredom++ ;
-      $("#boredom").val(game.boredom);
-      if (this.boredom >= 10) {
-        console.log("Game Over - your cat found a new home")
-      } 
-    },
+  sleepyTimer: null,
+  startSleepyTimer() {
+    this.sleepyTimer = setInterval(this.increaseSleepy.bind(game), 12000)
+  },
 
+  increaseSleepy() {
+    this.sleepy++ ;
+    $("#sleepy").val(game.sleepy);
+    if (this.sleepy >= 10) {
+      console.log("Game Over - your cat found a new home")
+    } 
+  },
+
+  boredomTimer: null,
+  startBoredomTimer() {
+    this.boredomTimer = setInterval(this.increaseBoredom.bind(game), 8000)
+  },
+
+  increaseBoredom() {
+    this.boredom++ ;
+    $("#boredom").val(game.boredom);
+    if (this.boredom >= 10) {
+      console.log("Game Over - your cat found a new home")
+    } 
+  },
+
+  /* === Buttons === */
+
+  /* 
+    add event listener to buttons
+      - query the dom to grab buttons and apply a method 
+      - call the method handlePoke -> will recieve an event param -> use a bind for the value of this 
+      - FIRST we want to log the click
+      - SECOND adjust the value of status related to the button that was clicked
+ 
+  
+  */
+    $("#play").click(function() {
+      alert( "Handler for .click() called." );
+    }),
+
+/*     handlePoke(event) {
+      const $feed = $(event.target);
+    } */
   }
 
 
 
+/* 
+  handlePoke(event) {
+    const $square = $(event.target);
 
-  // always store your setInterval into a variable and this will start it
+    if (!$square.hasClass("poked")) {
+      console.log("Poked the square", event.target);
+      $square.css("opacity", 0.5).addClass("poked");
+      // $(event.target).off("click", this.handlePoke); this will not work because the event listener is NOT on the element it is on the parent
+*/
+
+  /* === Event Listeners === */
 
 
 
+/* 
 
-  // how to stop a timer
-  // clearInterval(timer);
-  
+game.button.click(game.start.bind(game));
+
+$(".squares").on("click", ".square", game.handlePoke.bind(game));*/
+
+}
+
+// always store your setInterval into a variable and this will start it
+
+// how to stop a timer
+// clearInterval(timer);
+
+
