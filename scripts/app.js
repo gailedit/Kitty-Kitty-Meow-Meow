@@ -70,70 +70,75 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
     const $boredomStatus = ; */
 
     /* === Game Logic === */
-    start(event){
-        console.warn("=== Keep your precious pet alive! ===");
+     start(event){
+        this.startAgeTimer();
+        this.startHungerTimer();
+        this.startSleepyTimer();
+        this.startBoredomTimer();
     },
   
-    timer: null,
+    ageTimer: null,
     startAgeTimer() {
-      this.timer = setInterval(this.increaseAge.bind(game), 60000)
+      this.ageTimer = setInterval(this.increaseAge.bind(game), 30000)
     },
 
     increaseAge() {
       this.age++ ;
       $("#catAge").text(game.age);
       if (this.age >= 20) {
-        console.log("Game Over");
+        console.log("Game Over - your cat lived a long life and has crossed the rainbow bridge");
       }
-    }
+    },
 
+    hungerTimer: null,
+    startHungerTimer() {
+      this.hungerTimer = setInterval(this.increaseHunger.bind(game), 6000)
+    },
 
+    increaseHunger() {
+      this.hunger++ ;
+      $("#hunger").val(game.hunger);
+      if (this.hunger >= 10) {
+        console.log("Game Over - your cat found a new home")
+      } 
+    },
+
+    sleepyTimer: null,
+    startSleepyTimer() {
+      this.sleepyTimer = setInterval(this.increaseSleepy.bind(game), 12000)
+    },
+
+    increaseSleepy() {
+      this.sleepy++ ;
+      $("#sleepy").val(game.sleepy);
+      if (this.sleepy >= 10) {
+        console.log("Game Over - your cat found a new home")
+      } 
+    },
+
+    boredomTimer: null,
+    startBoredomTimer() {
+      this.boredomTimer = setInterval(this.increaseBoredom.bind(game), 6000)
+    },
+
+    increaseBoredom() {
+      this.boredom++ ;
+      $("#boredom").val(game.boredom);
+      if (this.boredom >= 10) {
+        console.log("Game Over - your cat found a new home")
+      } 
+    },
 
   }
 
-/*   setInterval(function(){ 
-	console.log("Oooo Yeaaa!");
-}, 2000);
 
-   const updateTime = function updateTime() {
-    console.log("A second has passed");
-  };
-  
-  timer: null,
-  startTimer() {
-    this.timer = setInterval(this.reduceTime.bind(game), 1000);
-  },
-
-  reduceTime() {
-    this.time--;
-    $("#timer").text(`timer: ${game.time}s`);
-    if (this.time <= 0) {
-      this.round++;
-      this.setUpRound();
-    }
-  }, */
 
 
   // always store your setInterval into a variable and this will start it
 
 
-    
 
 
- 
-
-  const hungerTimer = setInterval(function(){
-    console.log("getting hungrier");
-  }, 5000);
-
-  const sleepyTimer = setInterval(function(){
-    console.log("getting sleepier");
-  }, 12000);
-
-  const boredTimer = setInterval(function(){
-    console.log("getting booorrrreeeddd");
-  }, 8000);
-  
   // how to stop a timer
-  clearInterval(timer);
+  // clearInterval(timer);
   
