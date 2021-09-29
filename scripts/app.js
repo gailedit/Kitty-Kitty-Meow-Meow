@@ -41,15 +41,6 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
   - Select cat gender/pronouns
   - Status bars change color based on current value: 0-4 green, 5-7 goldenrod, 8-10 red */
 
-  // Starting values
-  /* 
-  Name: null
-  Age: 0
-  Hunger: 0
-  Sleepy: 0
-  Boredom: 0
-  Image: kitten
-  */
 
 
 const game = {
@@ -59,7 +50,7 @@ const game = {
   hunger: 0,
   sleepy: 0,
   boredom: 0,
-  
+  button: $("#feed"), $("#nap"), $("#play"),
   image: "kitten",
 
 
@@ -136,13 +127,24 @@ const game = {
  
   
   */
-   
+      handlePoke(event) {
+        const $button = $(event.target);
 
-        $("button").click(function(){
+        this.feed.click(function(){
           alert("The button was clicked.");
-        });
+        }),
+        
+        //$('element').click(function(){
+          // Do something
+        //});
 
 
+        reduceValue() {
+          console.log("this will reduce status value");
+          const $hungerValue = $("#hunger");
+
+          let this.hunger
+        }
   }
 
 

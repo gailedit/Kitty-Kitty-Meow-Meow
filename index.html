@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Grandstander&display=swap');
-    </style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Varela+Round&display=swap');</style>
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css">
     <!-- JQuery -->
@@ -23,6 +23,7 @@
 </head>
 <body>
     <main>
+
         <header>
             <status class="status">
                 <progress id="hunger" value="0" max="10">""</progress><br>
@@ -37,7 +38,7 @@
                 <label for="boredom">Boredom Level</label>
             </status>
         </header>
-        <container>
+        <container2>
             <aside>
                 <h2 id="name">
                 <label for="name">To start, enter cat name:</label>
@@ -50,14 +51,14 @@
             <section>
                 <img src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2787&q=80" class="responsive">
             </section>
-        </container>
+        </container2>
         <footer>
-            
-            <input type="button" value="Feed me" id="feed" class="action">
-            <input type="button" value="Nap time" id="nap-time" class="action">
-            <input type="button" value="Let's play" id="play" class="action">
+            <button id="feed" class="action">Feed me</button>
+            <button id="nap" class="action">Nap time</button>
+            <button id="play" class="action">Let's play</button>
 
         </footer>
+
     </main>
     
 </body>

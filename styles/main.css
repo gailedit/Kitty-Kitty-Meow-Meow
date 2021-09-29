@@ -32,7 +32,9 @@ main {
     background-size: 15%;
     padding: 50px;
     width: 100%;
+    font-family: 'Grandstander', cursive;
 }
+
 
 header {
     border: 2px solid green;
@@ -67,7 +69,7 @@ progress[value]::-webkit-progress-value {
 
 /* === */
 
-container {
+container2 {
     display: flex;
 }
 
@@ -79,6 +81,11 @@ aside {
     flex-direction: column;
     text-align: center;
     background-color: var(--side);
+}
+
+age {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 16px;
 }
 
 h2 {
