@@ -14,49 +14,32 @@
     <script src="./scripts/app.js" defer></script>
 
     <!-- Modal -->
-   <!--  <div class="modal" id="modal-one" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-header">
-                <h2>Your new kitten is so happy to meet you! What are you going to name it?</h2>
-    <a href="#modal-one" class="btn-close" aria-hidden="true">×</a>
 
-            </div>
-            <div class="modal-body">
-                <p><form action="/action_page.php">
-                    <input type="text" id="catName" name="catName"></p>
-            </div>
-            <div class="modal-footer"> <a href="#modal-one" class="btn">Take me to my kitty!</a>
 
-            </div>
-        </div>
-    </div>
-    <div class="wrap"> <a href="#" class="btn btn-big">Name your cat!</a>
-
-    </div> -->
 
     <title>🐱 Tomagotchi 🐱</title>
 </head>
 <body>
     <main>
         <header>
-            <status id="hungry" class="status">
-                <div class="status-bar">[STATUS BAR SPACEHOLDER]</div>
-                Hunger Level
+            <status class="status">
+                <span><progress id="hunger" value="5" max="10">""</progress></span><br>
+                <label for="hunger">Hunger Level</label>
             </status>
-            <status id="sleepy" class="status">
-                <div class="status-bar">[STATUS BAR SPACEHOLDER]</div>
-                Sleepy Level
+            <status class="status">
+                <progress id="sleepy" value="5" max="10">""</progress><br>
+                <label for="sleepy">Sleepy Level</label>
             </status>
-            <status id="bored" class="status">
-                <div class="status-bar">[STATUS BAR SPACEHOLDER]</div>
-                Boredom Level
+            <status class="status">
+                <progress id="bored" value="5" max="10">""</progress><br>
+                <label for="bored">Boredom Level</label>
             </status>
         </header>
         <container>
             <aside>
                 <h2 id="name">catName</h2>
                 <age>
-                    is <div catAge="">___</div> years old
+                    is <div id="catAge">___</div> years old
                 </age>
             </aside>
             <section>

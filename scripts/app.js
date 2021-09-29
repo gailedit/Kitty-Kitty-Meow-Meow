@@ -60,6 +60,16 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
     Sleepy: 0,
     Boredom: 0,
     Image: "kitten",
+
+    /* === Declaring variables === */
+    const $main = $("main");
+
+    const $catName = ;
+    const $catAge = ;
+    const $hungerStatus = ;
+    const $sleepyStatus = ;
+    const $boredomStatus = ;
+
     /* === Game Logic === */
     start(event){
         console.warn("=== Keep your precious pet alive! ===");
@@ -76,12 +86,31 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
 
   }
 
-  const logEverySecond = function logEverySecond() {
+  setInterval(function(){ 
+	console.log("Oooo Yeaaa!");
+}, 2000);
+
+   const updateTime = function updateTime() {
     console.log("A second has passed");
   };
   
   // always store your setInterval into a variable and this will start it
-  const timer = setInterval(logEverySecond, 1000);
+
+  const ageTimer = setInterval(function(){
+    console.log("getting older");
+  }, 60000);
+
+  const hungerTimer = setInterval(function(){
+    console.log("getting hungrier");
+  }, 5000);
+
+  const sleepyTimer = setInterval(function(){
+    console.log("getting sleepier");
+  }, 12000);
+
+  const boredTimer = setInterval(function(){
+    console.log("getting booorrrreeeddd");
+  }, 8000);
   
   // how to stop a timer
   clearInterval(timer);
