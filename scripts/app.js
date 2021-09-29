@@ -54,39 +54,44 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
 
   const game = {
       /* === Game Values === */
-    Name: null,
-    Age: 0,
-    Hunger: 0,
-    Sleepy: 0,
-    Boredom: 0,
-    Image: "kitten",
+    name: null,
+    age: 0,
+    hunger: 0,
+    sleepy: 0,
+    boredom: 0,
+    image: "kitten",
 
     /* === Declaring variables === */
-    const $main = $("main");
 
-    const $catName = ;
+    /* const $catName = ;
     const $catAge = ;
     const $hungerStatus = ;
     const $sleepyStatus = ;
-    const $boredomStatus = ;
+    const $boredomStatus = ; */
 
     /* === Game Logic === */
     start(event){
         console.warn("=== Keep your precious pet alive! ===");
-    }
-
-
-
+    },
+  
     timer: null,
-    startTimer() {
-        this.timer = setInterval(this.increaseTime.bind(game), 1000);
+    startAgeTimer() {
+      this.timer = setInterval(this.increaseAge.bind(game), 60000)
+    },
+
+    increaseAge() {
+      this.age++ ;
+      $("#catAge").text(game.age);
+      if (this.age >= 20) {
+        console.log("Game Over");
+      }
     }
 
 
 
   }
 
-  setInterval(function(){ 
+/*   setInterval(function(){ 
 	console.log("Oooo Yeaaa!");
 }, 2000);
 
@@ -94,11 +99,28 @@ Basic: Modal pops us to tell user "[cat name] has died of [old age, hunger, bore
     console.log("A second has passed");
   };
   
+  timer: null,
+  startTimer() {
+    this.timer = setInterval(this.reduceTime.bind(game), 1000);
+  },
+
+  reduceTime() {
+    this.time--;
+    $("#timer").text(`timer: ${game.time}s`);
+    if (this.time <= 0) {
+      this.round++;
+      this.setUpRound();
+    }
+  }, */
+
+
   // always store your setInterval into a variable and this will start it
 
-  const ageTimer = setInterval(function(){
-    console.log("getting older");
-  }, 60000);
+
+    
+
+
+ 
 
   const hungerTimer = setInterval(function(){
     console.log("getting hungrier");
