@@ -1,12 +1,13 @@
 :root {
-    --head-foot: 
-    --side: 
+    --head-foot: whitesmoke;
+    --side: whitesmoke;
     --status-value: 
     --status-container: 
     --text: 
-    --main: 
+    --main: whitesmoke;
     --buttons: 
   }
+
 
 
 * {
@@ -27,6 +28,8 @@ body {
 
 main {
     border: 2px solid red;
+    background-image: url(https://image.freepik.com/free-vector/seamless-pattern-with-cats-hearts_136351-246.jpg);
+    background-size: 15%;
     padding: 50px;
     width: 100%;
 }
@@ -36,6 +39,8 @@ header {
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    font-family: 'Grandstander', cursive;
+    font-size: 20px;
     text-align: center;
     background-color: var(--head-foot);
     
@@ -86,7 +91,7 @@ section {
     border: 2px solid purple;
     padding: 50px;
     width: 80%;
-    background-color: var(--main);
+    background-color: whitesmoke;
 }
 
 .responsive {
@@ -107,11 +112,14 @@ footer {
 .action {
     padding: 15px;
     margin: 15px;
-    width: 150px;
-    height: 70px;
+    width: 200px;
+    height: 90px;
     border-radius: 4px;
     box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
     -webkit-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
-    -moz-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);;
+    -moz-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    cursor: pointer;
+    font-family: 'Grandstander', cursive;
+    font-size: 30px;
 }
 
