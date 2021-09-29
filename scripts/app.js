@@ -136,38 +136,23 @@ const game = {
  
   
   */
-    $("#play").click(function() {
-      alert( "Handler for .click() called." );
-    }),
+   
 
-/*     handlePoke(event) {
-      const $feed = $(event.target);
-    } */
+        $("button").click(function(){
+          alert("The button was clicked.");
+        });
+
+
   }
 
 
 
-/* 
-  handlePoke(event) {
-    const $square = $(event.target);
 
-    if (!$square.hasClass("poked")) {
-      console.log("Poked the square", event.target);
-      $square.css("opacity", 0.5).addClass("poked");
-      // $(event.target).off("click", this.handlePoke); this will not work because the event listener is NOT on the element it is on the parent
-*/
 
   /* === Event Listeners === */
 
 
 
-/* 
-
-game.button.click(game.start.bind(game));
-
-$(".squares").on("click", ".square", game.handlePoke.bind(game));*/
-
-}
 
 // always store your setInterval into a variable and this will start it
 

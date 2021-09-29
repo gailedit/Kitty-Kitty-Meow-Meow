@@ -23,7 +23,7 @@
     <main>
         <header>
             <status class="status">
-                <span><progress id="hunger" value="0" max="10">""</progress></span><br>
+                <progress id="hunger" value="0" max="10">""</progress><br>
                 <label for="hunger">Hunger Level</label>
             </status>
             <status class="status">
@@ -37,7 +37,10 @@
         </header>
         <container>
             <aside>
-                <h2 id="name">catName</h2>
+                <h2 id="name">
+                <label for="name">To start, enter cat name:</label>
+                <div><input type="text" id="name" name="name" required
+                    minlength="2" maxlength="15" size="16"></div></h2>
                 <age>
                     is <span id="catAge">0</span> years old
                 </age>
@@ -47,15 +50,11 @@
             </section>
         </container>
         <footer>
-            <button id="feed" class="action">
-                Feed
-            </button>
-            <button id="nap-time" class="action">
-                Nap Time
-            </button>
-            <div id="play"><button class="action">
-                Play
-            </button></div>
+            
+            <input type="button" value="Feed me" id="feed" class="action">
+            <input type="button" value="Nap time" id="nap-time" class="action">
+            <input type="button" value="Let's play" id="play" class="action">
+
         </footer>
     </main>
     
