@@ -66,15 +66,20 @@ const game = {
   /* === Timers === */
   ageTimer: null,
   startAgeTimer() {
-    this.ageTimer = setInterval(this.increaseAge.bind(game), 30000)
+    this.ageTimer = setInterval(this.increaseAge.bind(game), 10000)
   },
 
   increaseAge() {
     this.age++ ;
     $("#catAge").text(game.age);
     if (this.age >= 20) {
+      this.gameOver();
+      //clearInterval(this.ageTimer);
+      console.log("Game Over - your cat lived a long happy life and has crossed the rainbow bridge");
+    };
+/*     if (this.age >= 20) {
       console.log("Game Over - your cat lived a long life and has crossed the rainbow bridge");
-    }
+    } */
   },
 
   hungerTimer: null,
@@ -86,8 +91,13 @@ const game = {
     this.hunger++ ;
     $("#hunger").val(game.hunger);
     if (this.hunger >= 10) {
+      this.gameOver();
+      //clearInterval(this.hungerTimer);
+      console.log("Game Over - your cat found a new home");
+    };
+/*     if (this.hunger >= 10) {
       console.log("Game Over - your cat found a new home")
-    } 
+    }  */
   },
 
   sleepyTimer: null,
@@ -99,8 +109,13 @@ const game = {
     this.sleepy++ ;
     $("#sleepy").val(game.sleepy);
     if (this.sleepy >= 10) {
+      this.gameOver();
+      //clearInterval(this.sleepyTimer);
+      console.log("Game Over - your cat found a new home");
+    };
+/*     if (this.sleepy >= 10) {
       console.log("Game Over - your cat found a new home")
-    } 
+    }  */
   },
 
   boredomTimer: null,
@@ -112,22 +127,18 @@ const game = {
     this.boredom++ ;
     $("#boredom").val(game.boredom);
     if (this.boredom >= 10) {
+      this.gameOver();
+      //clearInterval(this.boredomTimer);
+      console.log("Game Over - your cat found a new home");
+    };
+/*     if (this.boredom >= 10) {
       console.log("Game Over - your cat found a new home")
-    } 
+    }  */
   },
 
   
 
   /* === Buttons === */
-
-  /* 
-    add event listener to buttons
-      - query the dom to grab buttons and apply a method 
-      - call the method handlePoke -> will recieve an event param -> use a bind for the value of this 
-      - FIRST we want to log the click
-      - SECOND adjust the value of status related to the button that was clicked
-  
-  */
 
   decreaseHunger() {
     this.hunger-- ;
@@ -147,9 +158,45 @@ const game = {
 
     /* === Game Over === */
     
-/*     oldAge() = {
-      if this.ageTimer >= 20
-    } */
+  gameOver() {
+    clearInterval(this.ageTimer);
+    clearInterval(this.hungerTimer);
+    clearInterval(this.sleepyTimer);
+    clearInterval(this.boredomTimer);
+  },
+
+    /* oldAge() {
+      $("#catAge").val(game.age);
+      if (this.age >= 20) {
+        clearInterval(this.ageTimer);
+        console.log("Game Over - your cat lived a long happy life and has crossed the rainbow bridge");
+      };
+    },
+
+    soHungry() {
+      $("#hunger").val(game.hunger);
+      if (this.hunger >= 10) {
+        clearInterval(this.hungerTimer);
+        console.log("Game Over - your cat found a new home");
+      };
+    },
+
+    soSleepy() {
+      $("#sleepy").val(game.sleepy);
+      if (this.sleepy >= 10) {
+        clearInterval(this.sleepyTimer);
+        console.logalert("Game Over - your cat found a new home");
+      };
+    },
+
+    soBored() {
+      $("#boredom").val(game.boredom);
+      if (this.boredom >= 10) {
+        clearInterval(this.boredomTimer);
+        console.alert("Game Over - your cat found a new home");
+      };
+    }, */
+
 
   }
 
