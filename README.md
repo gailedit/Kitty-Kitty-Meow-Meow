@@ -40,6 +40,7 @@ Your app must:
   - Status bars change color based on current value: 0-4 green, 5-7 goldenrod, 8-10 red
   - Animate/emphasize "To start, enter cat name"
   - "is 0 years old" hidden until game.start(); then hide "To start, enter cat name"
+  - Add favicon
 
 === Timeline ===
 Tuesday: Finish planning, build repo, set up static site; start building objects

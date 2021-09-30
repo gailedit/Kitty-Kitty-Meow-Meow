@@ -50,7 +50,7 @@ const game = {
   hunger: 0,
   sleepy: 0,
   boredom: 0,
-  button: $("#feed"), $("#nap"), $("#play"),
+  button: [$("#feedMe"), $("#nap"), $("#play")],
   image: "kitten",
 
 
@@ -79,7 +79,7 @@ const game = {
 
   hungerTimer: null,
   startHungerTimer() {
-    this.hungerTimer = setInterval(this.increaseHunger.bind(game), 6000)
+    this.hungerTimer = setInterval(this.increaseHunger.bind(game), 1250)
   },
 
   increaseHunger() {
@@ -92,7 +92,7 @@ const game = {
 
   sleepyTimer: null,
   startSleepyTimer() {
-    this.sleepyTimer = setInterval(this.increaseSleepy.bind(game), 12000)
+    this.sleepyTimer = setInterval(this.increaseSleepy.bind(game), 2500)
   },
 
   increaseSleepy() {
@@ -105,7 +105,7 @@ const game = {
 
   boredomTimer: null,
   startBoredomTimer() {
-    this.boredomTimer = setInterval(this.increaseBoredom.bind(game), 8000)
+    this.boredomTimer = setInterval(this.increaseBoredom.bind(game), 1750)
   },
 
   increaseBoredom() {
@@ -116,6 +116,8 @@ const game = {
     } 
   },
 
+  
+
   /* === Buttons === */
 
   /* 
@@ -124,36 +126,49 @@ const game = {
       - call the method handlePoke -> will recieve an event param -> use a bind for the value of this 
       - FIRST we want to log the click
       - SECOND adjust the value of status related to the button that was clicked
- 
   
   */
-      handlePoke(event) {
-        const $button = $(event.target);
 
-        this.feed.click(function(){
-          alert("The button was clicked.");
-        }),
-        
-        //$('element').click(function(){
-          // Do something
-        //});
+  decreaseHunger() {
+    this.hunger-- ;
+    $("#hunger").val(game.hunger);
+  },
+
+  decreaseSleepy() {
+    this.sleepy--;
+    $("#sleepy").val(game.sleepy);
+  },
+  
+  decreaseBoredom() {
+    this.boredom--;
+    $("#boredom").val(game.boredom);
+  },
 
 
-        reduceValue() {
-          console.log("this will reduce status value");
-          const $hungerValue = $("#hunger");
+    /* === Game Over === */
+    
+/*     oldAge() = {
+      if this.ageTimer >= 20
+    } */
 
-          let this.hunger
-        }
   }
-
 
 
 
 
   /* === Event Listeners === */
 
+  $("#feedMe").click(function(){
+    game.decreaseHunger();
+  })
 
+  $("#nap").click(function(){
+    game.decreaseSleepy();
+  })
+
+  $("#play").click(function(){
+    game.decreaseBoredom();
+  })
 
 
 // always store your setInterval into a variable and this will start it
