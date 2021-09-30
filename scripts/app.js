@@ -50,13 +50,17 @@ const game = {
   hunger: 0,
   sleepy: 0,
   boredom: 0,
-  button: [$("#feedMe"), $("#nap"), $("#play")],
+  button: [$("submitName"), $("#feedMe"), $("#nap"), $("#play")],
   image: "kitten",
 
-
   /* === Game Logic === */
+  
+  
   start(event){
     console.warn("=== Keep your precious kitty alive! ===")
+    $("#name").text($("#nameInput").val());
+    $("#ageStatement").css("visibility", "visible");
+    $("#modal").css("visibility", "hidden");
     this.startAgeTimer();
     this.startHungerTimer();
     this.startSleepyTimer();
@@ -66,7 +70,7 @@ const game = {
   /* === Timers === */
   ageTimer: null,
   startAgeTimer() {
-    this.ageTimer = setInterval(this.increaseAge.bind(game), 10000)
+    this.ageTimer = setInterval(this.increaseAge.bind(game), 6000)
   },
 
   increaseAge() {
@@ -138,15 +142,25 @@ const game = {
 
   /* === Game Over === */
   gameOver() {
+    $("#gameOverModal").css("visibility", "visible");
     clearInterval(this.ageTimer);
     clearInterval(this.hungerTimer);
     clearInterval(this.sleepyTimer);
     clearInterval(this.boredomTimer);
+    if(this.age >= 20){
+      $("#gameOverMsg").append("<br>your cat lived a long happy life and has crossed the rainbow bridge");
+    } else {
+      $("#gameOverMsg").append("<br>your cat found a new home");
+    };
   },
 
 }
 
   /* === Event Listeners === */
+  $("#submitName").click(function(){
+    game.start();
+  })
+
   $("#feedMe").click(function(){
     game.decreaseHunger();
   })
@@ -159,6 +173,14 @@ const game = {
     game.decreaseBoredom();
   })
 
+  $("#playAgain").click(function(){
+    location.reload();
+    //return false;
+  })
 
 
+// adolescent: https://images.unsplash.com/photo-1608460474143-03976576ef9d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2787&q=80
 
+// adult: https://images.unsplash.com/photo-1614992605446-375b99e9ef75?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2609&q=80
+
+// senior: https://images.unsplash.com/photo-1587642808058-f2380dc5cbc6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2942&q=80
