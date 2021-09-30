@@ -55,10 +55,6 @@ progress {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 15px;
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
 }
 
 
@@ -130,4 +126,41 @@ footer {
     font-family: 'Grandstander', cursive;
     font-size: 30px;
 }
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background-color: whitesmoke;
+    border: 2px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Grandstander', cursive;
+    font-size: 20px;
+  }
+
+  input#name {
+      margin-top: 30px;
+      padding: 5px;
+      border-radius: 4px;
+      font-family: 'Varela Round', sans-serif;
+      font-size: 18px;
+      text-align: center;
+  }
+
+  #submitName {
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 4px;
+    box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    -moz-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    cursor: pointer;
+    font-family: 'Grandstander', cursive;
+    font-size: 20px;
+  }
 

@@ -17,14 +17,14 @@ Friday: 10:00 am deployment
 === User Stories ===
 
 User is greeted with a modal stating "Your new kitten is so happy to meet you! What are you going to name it?" with a textbox to enter cat's name.
-Modal disappears and the user appears at a screen with a kitten in the middle, status indicators of hungry, sleepy, and bored set to zero, the cat's name and age, and three action buttons to feed, turn off lights, and play.
-Cat's age increases by one year each minute.
-Hunger status increases by one point every 5 seconds
-Sleepiness status increases by one point every 12 seconds
-Boredom status increases by one point every 8 seconds
-When feed action is clicked, hunger status decreases by 4 points
-When turn off lights action is clicked, sleepiness status decreases by 5 points
-When play action is clicked, boredom status decreases by 3
+Modal disappears and the user appears at a screen with a kitten in the middle, status indicators of hungry, sleepy, and bored set to zero, the cat's name and age (also set to zero), and three action buttons that say feed me, nap time, and let's play.
+Cat's age increases by one year every 10 seconds.
+Hunger status increases by one point every 1.25 seconds
+Sleepiness status increases by one point every 2.5 seconds
+Boredom status increases by one point every 1.75 seconds
+When feed action is clicked, hunger status decreases by 1
+When turn off lights action is clicked, sleepiness status decreases by 1
+When play action is clicked, boredom status decreases by 1
 
 Cat mood will change image based on status levels. Whenever any status reaches 8, cat will be grumpy (animate to hiss/growl). Whenever all statuses are at 0, cat will be happy (cuddle/loving).
 
@@ -74,12 +74,8 @@ const game = {
     $("#catAge").text(game.age);
     if (this.age >= 20) {
       this.gameOver();
-      //clearInterval(this.ageTimer);
       console.log("Game Over - your cat lived a long happy life and has crossed the rainbow bridge");
     };
-/*     if (this.age >= 20) {
-      console.log("Game Over - your cat lived a long life and has crossed the rainbow bridge");
-    } */
   },
 
   hungerTimer: null,
@@ -92,12 +88,8 @@ const game = {
     $("#hunger").val(game.hunger);
     if (this.hunger >= 10) {
       this.gameOver();
-      //clearInterval(this.hungerTimer);
       console.log("Game Over - your cat found a new home");
     };
-/*     if (this.hunger >= 10) {
-      console.log("Game Over - your cat found a new home")
-    }  */
   },
 
   sleepyTimer: null,
@@ -110,12 +102,8 @@ const game = {
     $("#sleepy").val(game.sleepy);
     if (this.sleepy >= 10) {
       this.gameOver();
-      //clearInterval(this.sleepyTimer);
       console.log("Game Over - your cat found a new home");
     };
-/*     if (this.sleepy >= 10) {
-      console.log("Game Over - your cat found a new home")
-    }  */
   },
 
   boredomTimer: null,
@@ -128,18 +116,11 @@ const game = {
     $("#boredom").val(game.boredom);
     if (this.boredom >= 10) {
       this.gameOver();
-      //clearInterval(this.boredomTimer);
       console.log("Game Over - your cat found a new home");
     };
-/*     if (this.boredom >= 10) {
-      console.log("Game Over - your cat found a new home")
-    }  */
   },
 
-  
-
   /* === Buttons === */
-
   decreaseHunger() {
     this.hunger-- ;
     $("#hunger").val(game.hunger);
@@ -155,9 +136,7 @@ const game = {
     $("#boredom").val(game.boredom);
   },
 
-
-    /* === Game Over === */
-    
+  /* === Game Over === */
   gameOver() {
     clearInterval(this.ageTimer);
     clearInterval(this.hungerTimer);
@@ -165,46 +144,9 @@ const game = {
     clearInterval(this.boredomTimer);
   },
 
-    /* oldAge() {
-      $("#catAge").val(game.age);
-      if (this.age >= 20) {
-        clearInterval(this.ageTimer);
-        console.log("Game Over - your cat lived a long happy life and has crossed the rainbow bridge");
-      };
-    },
-
-    soHungry() {
-      $("#hunger").val(game.hunger);
-      if (this.hunger >= 10) {
-        clearInterval(this.hungerTimer);
-        console.log("Game Over - your cat found a new home");
-      };
-    },
-
-    soSleepy() {
-      $("#sleepy").val(game.sleepy);
-      if (this.sleepy >= 10) {
-        clearInterval(this.sleepyTimer);
-        console.logalert("Game Over - your cat found a new home");
-      };
-    },
-
-    soBored() {
-      $("#boredom").val(game.boredom);
-      if (this.boredom >= 10) {
-        clearInterval(this.boredomTimer);
-        console.alert("Game Over - your cat found a new home");
-      };
-    }, */
-
-
-  }
-
-
-
+}
 
   /* === Event Listeners === */
-
   $("#feedMe").click(function(){
     game.decreaseHunger();
   })
@@ -218,9 +160,5 @@ const game = {
   })
 
 
-// always store your setInterval into a variable and this will start it
-
-// how to stop a timer
-// clearInterval(timer);
 
 
