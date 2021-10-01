@@ -3,8 +3,9 @@
     --side: #f4a261;
     --text: #264653;
     --main: #f4a261;
-    --buttons: ;
+    --buttons: #e9c46a;
     --modals: #2a9d8f;
+    --modals2: #e76f51;
   }
 
 
@@ -123,7 +124,18 @@ footer {
     cursor: pointer;
     font-family: 'Grandstander', cursive;
     font-size: 20px;
+    background: var(--modals);
 }
+
+button:hover {
+    background: var(--buttons) radial-gradient(circle, transparent 1%, var(--modals) 1%) center/15000%;
+    color: var(--modals);
+    }
+    button:active{
+    background-color:var(--text);
+    background-size: 100%;
+    transition: background .1s;
+    }
 
 /* Modal */
 
@@ -151,7 +163,7 @@ footer {
       text-align: center;
   }
 
-  #submitName {
+/*   #submitName {
     padding: 10px;
     margin-top: 30px;
     border-radius: 4px;
@@ -161,8 +173,26 @@ footer {
     cursor: pointer;
     font-family: 'Grandstander', cursive;
     font-size: 20px;
+    background: var(--modals2);
+  } */
+
+  .modal button {
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 4px;
+    box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    -moz-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+    cursor: pointer;
+    font-family: 'Grandstander', cursive;
+    font-size: 20px;
+    background: var(--modals2);
   }
 
+  .modal button:hover {
+    color: var(--buttons);
+  }
+  
 #gameOverModal {
     visibility: hidden;
 }
@@ -171,7 +201,7 @@ footer {
     font-family: 'Varela Round', sans-serif;
 }
 
-#playAgain {
+/* #playAgain {
     padding: 10px;
     margin-top: 30px;
     border-radius: 4px;
@@ -181,4 +211,5 @@ footer {
     cursor: pointer;
     font-family: 'Grandstander', cursive;
     font-size: 20px;
-}
+    background: var(--modals2);
+} */
