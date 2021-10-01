@@ -157,9 +157,9 @@ const game = {
     clearInterval(this.sleepyTimer);
     clearInterval(this.boredomTimer);
     if(this.age >= 20){
-      $("#gameOverMsg").append("<br>your cat lived a long happy life and has crossed the rainbow bridge");
+      $("#gameOverMsg").append("your cat lived a long happy life and has crossed the rainbow bridge");
     } else {
-      $("#gameOverMsg").append("<br>your cat found a new home");
+      $("#gameOverMsg").append("your cat found a new home");
     };
   },
 
