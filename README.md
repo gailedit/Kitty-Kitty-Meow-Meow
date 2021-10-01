@@ -73,7 +73,7 @@ Ice-box:
 === If cat age reaches 20, modal pops up to tell user "You provided [cat name] with a good life, but now it's time to cross the rainbow bridge"
 
 
-
+ 
 
   -->
 
