@@ -21,31 +21,33 @@
 /* === Game Page === */
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    size: 100%;
     padding: 0;
     margin: 0;
+    background-image: url(https://image.freepik.com/free-vector/seamless-pattern-with-cats-hearts_136351-246.jpg);
+    background-size: 15%;
+    height: 100vh;
+    padding: 70px;
+    font-family: 'Grandstander', cursive;
   }
 
 main {
     border: 2px solid red;
-    background-image: url(https://image.freepik.com/free-vector/seamless-pattern-with-cats-hearts_136351-246.jpg);
-    background-size: 15%;
-    padding: 70px;
-    width: 100%;
-    font-family: 'Grandstander', cursive;
+    background:  limegreen;
+    display: block;
+    height: 78vh;
+    width: 65vw;
+    margin: auto;
+    box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
+
 }
 
 
 header {
     border: 2px solid green;
     padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Grandstander', cursive;
     font-size: 20px;
     text-align: center;
-    background-color: var(--head-foot);
+
     
 }
 
@@ -55,6 +57,9 @@ progress {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin-top: 40px;
+    height: 30px;
+    border-radius: 10px;
 }
 
 
@@ -72,18 +77,21 @@ container2 {
 
 aside {
     border: 2px solid blue;
-    padding: 50px 15px;
-    height: inherit;
-    width: 20%;
+    padding: 30px 15px;
     flex-direction: column;
     text-align: center;
-    background-color: var(--side);
+    line-height: 1.5;
+    font-size: larger;
 }
 
 #ageStatement {
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
-    visibility: hidden;
+/*     visibility: hidden; */
+}
+
+#catAge {
+    font-size: large;
 }
 
 h2 {
@@ -96,12 +104,13 @@ section {
     border: 2px solid purple;
     padding: 50px;
     width: 80%;
-    background-color: whitesmoke;
+    display: block;
+    margin: auto;
 }
 
 .responsive {
     max-width: 50%;
-    max-height: auto;
+    max-height: 55vh;
 
 }
 
@@ -110,7 +119,6 @@ footer {
     padding: 15px;
     display: flex;
     justify-content: space-around;
-    background-color: var(--head-foot);
 }
 
 /* Button styling */
@@ -118,15 +126,13 @@ footer {
 .action {
     padding: 15px;
     margin: 15px;
-    width: 200px;
-    height: 90px;
     border-radius: 4px;
     box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
     -webkit-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
     -moz-box-shadow: 4px 3px 11px -3px rgba(0,0,0,0.52);
     cursor: pointer;
     font-family: 'Grandstander', cursive;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 /* Modal */

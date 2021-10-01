@@ -76,6 +76,15 @@ const game = {
   increaseAge() {
     this.age++ ;
     $("#catAge").text(game.age);
+/*     if (this.age = 4) {
+      $("img").attr("src", `https://images.unsplash.com/photo-1608460474143-03976576ef9d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2787&q=80`);
+    };
+    if (this.age = 9) {
+      $("img").attr("src", `https://images.unsplash.com/photo-1614992605446-375b99e9ef75?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2609&q=80`);
+    };
+    if (this.age = 14) {
+      $("img").attr("src", `https://images.unsplash.com/photo-1587642808058-f2380dc5cbc6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2942&q=80`);
+    } */
     if (this.age >= 20) {
       this.gameOver();
       console.log("Game Over - your cat lived a long happy life and has crossed the rainbow bridge");

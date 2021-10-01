@@ -28,27 +28,26 @@
 </head>
 <body>
     <main>
-
         <header>
-            <status class="status">
-                <progress id="hunger" value="0" max="10">""</progress><br>
-                <label for="hunger">Hunger Level</label>
-            </status>
-            <status class="status">
-                <progress id="sleepy" value="0" max="10">""</progress><br>
-                <label for="sleepy">Sleepy Level</label>
-            </status>
-            <status class="status">
-                <progress id="boredom" value="0" max="10">""</progress><br>
-                <label for="boredom">Boredom Level</label>
-            </status>
+            <h2 id="name"> </h2>
+            <age id="ageStatement">
+                is <span id="catAge">0</span> years old
+            </age>
         </header>
         <container2>
             <aside>
-                <h2 id="name"></h2>
-                <age id="ageStatement">
-                    is <span id="catAge">0</span> years old
-                </age>
+                <status class="status">
+                    <progress id="hunger" value="0" max="10">""</progress><br>
+                    <label for="hunger">Hunger Level</label>
+                </status>
+                <status class="status">
+                    <progress id="sleepy" value="0" max="10">""</progress><br>
+                    <label for="sleepy">Sleepy Level</label>
+                </status>
+                <status class="status">
+                    <progress id="boredom" value="0" max="10">""</progress><br>
+                    <label for="boredom">Boredom Level</label>
+                </status>
             </aside>
             <section>
                 <img src="https://images.unsplash.com/photo-1609630212923-2617c9a9b679?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2787&q=80" class="responsive">
@@ -58,12 +57,10 @@
             <button id="feedMe" class="action">Feed me</button>
             <button id="nap" class="action">Nap time</button>
             <button id="play" class="action">Let's play</button>
-
         </footer>
-
     </main>
     
-    <div class="modal" id="modal">To start, enter your cat's name here:
+ <!--    <div class="modal" id="modal">To start, enter your cat's name here:
         <div id="input"><input type="text" id="nameInput" name="name" required
             minlength="2" maxlength="15" size="20"></div>
             <button id="submitName">Submit</button>
@@ -72,7 +69,7 @@
     <div class="modal" id="gameOverModal">
         <h1 id="gameOverMsg">GAME OVER</h1>
         <button id="playAgain">Play Again</button>
-    </div>
+    </div> -->
 
 </body>
 </html>
