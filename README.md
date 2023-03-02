@@ -1,3 +1,9 @@
+**Kitty Kitty Meow Meow**
+AKA: Project Zero
+
+This was my first coding project, using HTML, CSS, and vanilla JavaScript. It's pretty silly and has a lot of room for improvement, but for now I keep it as a pinned project because it's a great reminder of how far I've come in my coding journey. I'm going to recreate this project at some point so that I can do a side-by-side comparison. My biggest "glow" on this project was learning how to create a modal from scratch.
+
+
 <!-- ## **Technical Requirements**
 
 Your app must:
